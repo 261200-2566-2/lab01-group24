@@ -1,17 +1,27 @@
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+import java.util.Scanner;
+import java.util.Arrays;
+
 public class Main {
+    public static void sorted(int[] a) {
+        Arrays.sort(a);
+    }
+
     public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.print("Hello and welcome!");
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+        Scanner s = new Scanner(System.in);
+        System.out.print("Enter your size : ");
+        int number = s.nextInt();
+        int[] x = new int[number];
 
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
+
+        for (int i = 0; i < number; i++) {
+            x[i] = s.nextInt();
         }
+        sorted(x);
+        for (int i : x
+        ) {
+            System.out.println(i);
+        }
+
     }
 }
